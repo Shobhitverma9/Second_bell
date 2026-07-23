@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FBF6EC;
+  color: #23262B;
+}
+
+::selection {
+  background: #F2A93B;
+  color: #16233F;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #F2A93B;
+  outline-offset: 3px;
+}
+
+.strike {
+  position: relative;
+}
+.strike::after {
+  content: "";
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  top: 50%;
+  height: 1.5px;
+  background: currentColor;
+  opacity: 0.6;
+  transform: rotate(-2deg);
+}
+
+.font-hindi,
+.font-hindi .font-display,
+.font-hindi .font-body {
+  font-family: "Noto Sans Devanagari", "Work Sans", sans-serif;
+}
