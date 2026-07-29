@@ -8,25 +8,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#16233F",
-        "ink-light": "#243459",
-        marigold: "#F2A93B",
-        "marigold-dark": "#D98E1E",
-        teal: "#2F6B63",
-        "teal-light": "#4C8A80",
-        paper: "#FBF6EC",
-        "paper-dim": "#F1E9D8",
-        charcoal: "#23262B",
-        clay: "#C1512F",
+        ink: "#0F172A", // Darker, cleaner slate
+        "ink-light": "#1E293B",
+        marigold: "#EA580C", // Vibrant Orange/Red for CTA (like Cry)
+        "marigold-dark": "#C2410C",
+        teal: "#0D9488", // More vibrant teal
+        "teal-light": "#14B8A6",
+        paper: "#FFFFFF", // Clean white background
+        "paper-dim": "#F8FAFC", // Light slate for off-white sections
+        charcoal: "#334155",
+        clay: "#DC2626", // Bold Red
       },
       fontFamily: {
-        display: ['"Fraunces"', "serif"],
-        body: ['"Work Sans"', "sans-serif"],
+        display: ['"Inter"', "sans-serif"], // Modern bold sans-serif
+        body: ['"Inter"', "sans-serif"],
         mono: ['"IBM Plex Mono"', "monospace"],
       },
       backgroundImage: {
         "rule-lines":
-          "repeating-linear-gradient(to bottom, transparent, transparent 35px, rgba(22,35,63,0.06) 35px, rgba(22,35,63,0.06) 36px)",
+          "repeating-linear-gradient(to bottom, transparent, transparent 35px, rgba(15,23,42,0.04) 35px, rgba(15,23,42,0.04) 36px)",
       },
     },
   },

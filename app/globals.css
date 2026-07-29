@@ -7,13 +7,13 @@ html {
 }
 
 body {
-  background-color: #FBF6EC;
-  color: #23262B;
+  background-color: #FFFFFF;
+  color: #334155;
 }
 
 ::selection {
-  background: #F2A93B;
-  color: #16233F;
+  background: #EA580C;
+  color: #FFFFFF;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -50,3 +50,34 @@ body {
 .font-hindi .font-body {
   font-family: "Noto Sans Devanagari", "Work Sans", sans-serif;
 }
+
+/* ── Marquee ticker ───────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Card image overlay gradient ─────────────────────────────── */
+.img-card-overlay {
+  background: linear-gradient(to top, rgba(15,23,42,0.80) 0%, transparent 55%);
+}
+
+/* ── Soft card hover lift ────────────────────────────────────── */
+.card-lift {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(15,23,42,0.18);
+}
+
