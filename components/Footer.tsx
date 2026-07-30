@@ -36,8 +36,8 @@ export default function Footer() {
         <div>
           <div className="text-xs uppercase tracking-widest text-marigold mb-4">{t.footer.reachUs}</div>
           <ul className="space-y-2.5 text-sm text-paper/65">
-            <li>hello@secondbell.org</li>
-            <li>+91 98XXX XXXXX</li>
+            <li>{t.contact.emailLabel}</li>
+            <li>{t.contact.phoneLabel}</li>
             <li>{t.footer.trust}</li>
           </ul>
         </div>
