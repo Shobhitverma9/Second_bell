@@ -47,6 +47,7 @@ function MarqueeTicker() {
 export default function Home() {
   const { t } = useLanguage();
   const h = t.home;
+  const g = t.getInvolved;
 
   return (
     <main>
@@ -198,6 +199,144 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── GET INVOLVED / CONTRIBUTE ────────────────────────── */}
+      <section className="bg-paper border-t border-ink/5">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16 sm:py-24">
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold text-marigold uppercase tracking-[0.2em] mb-3">
+              We need your help
+            </p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink max-w-2xl mx-auto">
+              Contribute for the cause
+            </h2>
+          </div>
+
+          <div className="space-y-20">
+            {/* Subsection 1 */}
+            <div className="grid lg:grid-cols-3 gap-8 items-start">
+              <div className="lg:col-span-2">
+                <div className="max-w-3xl mb-10">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink mb-4">
+                    {g.c1Focus.replace("Focus: ", "")}
+                  </h3>
+                  <p className="text-charcoal/80 leading-relaxed text-lg">
+                    {g.c1Body}
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <HomeCampaignCard subTitle="Monthly Sponsorship" price="₹900" priceSuffix="/ month" desc="Sponsors a child’s complete monthly tuition and examination fees." />
+                  <HomeCampaignCard subTitle="Yearly Sponsorship" price="₹10,800" priceSuffix="/ year" desc="Guarantees one full, uninterrupted academic year of education and dignity." isDark={true} />
+                </div>
+              </div>
+              <div className="lg:col-span-1 relative h-full min-h-[300px] lg:min-h-[400px] rounded-2xl overflow-hidden hidden lg:block">
+                <Image src="/images/education_continuity.jpg" alt="Education Continuity" fill className="object-cover" />
+              </div>
+            </div>
+
+            {/* Subsection 2 */}
+            <div className="grid lg:grid-cols-3 gap-8 items-start">
+              <div className="lg:col-span-2">
+                <div className="max-w-3xl mb-10">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink mb-4">
+                    {g.c2Focus.replace("Focus: ", "")}
+                  </h3>
+                  <p className="text-charcoal/80 leading-relaxed text-lg">
+                    {g.c2Body}
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <HomeCampaignCard subTitle="Uniform & Shoes" price="₹800" desc="2 sets of tailored school uniforms and sturdy leather school shoes." />
+                  <HomeCampaignCard subTitle="Annual Study Kit" price="₹500" desc="A durable backpack, 10 notebooks, geometry set, and complete writing stationery." />
+                  <HomeCampaignCard subTitle="Complete Confidence" price="₹1,300" desc="Full Uniform + Shoes + Complete Backpack Kit." isDark={true} />
+                </div>
+              </div>
+              <div className="lg:col-span-1 relative h-full min-h-[300px] lg:min-h-[400px] rounded-2xl overflow-hidden hidden lg:block">
+                <Image src="/images/school_kit.jpg" alt="School Kit" fill className="object-cover" />
+              </div>
+            </div>
+
+            {/* Subsection 3 */}
+            <div className="grid lg:grid-cols-3 gap-8 items-start">
+              <div className="lg:col-span-2">
+                <div className="max-w-3xl mb-10">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink mb-4">
+                    {g.c3Focus.replace("Focus: ", "")}
+                  </h3>
+                  <p className="text-charcoal/80 leading-relaxed text-lg">
+                    {g.c3Body}
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <HomeCampaignCard subTitle="Total Transformation" price="₹12,000" priceSuffix="/ year" desc="Fully supports 1 student with education, kit, and uniform for an entire academic year." isDark={true} />
+                </div>
+              </div>
+              <div className="lg:col-span-1 relative h-full min-h-[300px] lg:min-h-[400px] rounded-2xl overflow-hidden hidden lg:block">
+                <Image src="/images/full_sponsorship.jpg" alt="Total Transformation" fill className="object-cover" />
+              </div>
+            </div>
+
+            {/* Subsection 4 */}
+            <div className="grid lg:grid-cols-3 gap-8 items-start">
+              <div className="lg:col-span-2">
+                <div className="max-w-3xl mb-10">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink mb-4">
+                    {g.c4Focus.replace("Focus: ", "")}
+                  </h3>
+                  <p className="text-charcoal/80 leading-relaxed text-lg">
+                    {g.c4Body}
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <HomeCampaignCard subTitle="Micro-Enterprise" price="₹5,000" desc="Seeds a micro-enterprise capital loan for a parent in need." />
+                  <HomeCampaignCard subTitle="Family Stability" price="₹15,000" desc="Restores a family's financial stability while sponsoring their child's academic year simultaneously." isDark={true} />
+                </div>
+              </div>
+              <div className="lg:col-span-1 relative h-full min-h-[300px] lg:min-h-[400px] rounded-2xl overflow-hidden hidden lg:block">
+                <Image src="/images/micro_enterprise.jpg" alt="Family Stability" fill className="object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CAMPAIGN GALLERY ────────────────────────── */}
+      <section className="bg-ink text-white py-20 sm:py-28 relative">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="text-center mb-16">
+            <p className="text-xs font-bold text-marigold uppercase tracking-[0.2em] mb-3">
+              Recent Campaign
+            </p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white max-w-2xl mx-auto">
+              Paalanhaar – Food for Girl Education
+            </h2>
+            <p className="mt-4 text-white/70 max-w-2xl mx-auto">
+              A glimpse into our recent initiative supporting the education and nourishment of young girls.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              "/images/paalanhaar/img_1_1787033741374.jpg",
+              "/images/paalanhaar/img_2_1787034243692.jpg",
+              "/images/paalanhaar/img_3_1787034569079.jpg",
+              "/images/paalanhaar/img_7_1787036456296.jpg",
+              "/images/paalanhaar/ChatGPT Image Aug 18, 2026, 01_30_01 PM.png",
+              "/images/paalanhaar/ChatGPT Image Aug 18, 2026, 01_32_38 PM.png",
+            ].map((src, i) => (
+              <div key={i} className="relative aspect-video sm:aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 group cursor-pointer shadow-2xl bg-white/5">
+                <Image
+                  src={src}
+                  alt={`Paalanhaar Campaign Image ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── WIDE STORY CARD (Goonj Latest Updates style) ────── */}
       <section className="bg-paper-dim">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16 sm:py-24">
@@ -305,6 +444,53 @@ function Quote({
         <span className="text-ink font-bold">{name}</span>
         <span className="mx-2 opacity-40">|</span>
         {role}
+      </div>
+    </div>
+  );
+}
+
+function HomeCampaignCard({ 
+  subTitle, 
+  price, 
+  priceSuffix, 
+  desc, 
+  isDark = false 
+}: { 
+  subTitle: string; 
+  price: string; 
+  priceSuffix?: string; 
+  desc: string; 
+  isDark?: boolean; 
+}) {
+  return (
+    <div className={`${isDark ? "bg-ink text-white shadow-lg border-ink hover:border-marigold/50" : "bg-white text-ink shadow-sm hover:shadow-md border-ink/5 hover:border-marigold/50"} rounded-2xl p-6 sm:p-8 border-2 transition-colors flex flex-col relative overflow-hidden group`}>
+      {isDark && (
+        <div className="absolute top-0 right-0 p-4">
+          <span className="inline-block bg-marigold text-ink text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">High Impact</span>
+        </div>
+      )}
+      <div className="mb-4">
+        <p className="text-xs font-bold text-marigold uppercase tracking-wider mb-2">{subTitle}</p>
+        <p className={`font-display text-4xl font-extrabold ${isDark ? "text-white" : "text-ink"}`}>
+          {price} {priceSuffix && <span className={`text-lg font-medium ${isDark ? "text-white/50" : "text-ink/50"}`}>{priceSuffix}</span>}
+        </p>
+      </div>
+      <p className={`${isDark ? "text-white/70" : "text-charcoal/70"} mb-8 flex-1 leading-relaxed`}>
+        {desc}
+      </p>
+      <div className="flex items-center gap-3 mt-auto relative z-10">
+        <Link
+          href="/get-involved#donate"
+          className="flex-1 text-center rounded-full bg-marigold px-4 py-3 text-sm font-bold text-ink hover:bg-marigold-dark transition-colors"
+        >
+          Donate
+        </Link>
+        <Link
+          href="/get-involved"
+          className={`flex-1 text-center rounded-full border-2 px-4 py-3 text-sm font-bold transition-colors ${isDark ? "border-white/20 text-white hover:border-white/50" : "border-ink/10 text-ink hover:border-ink/30"}`}
+        >
+          View More
+        </Link>
       </div>
     </div>
   );
